@@ -49,7 +49,6 @@ def main():
     doc_dir = doc_info_path.parent
 
     new_infos = [i for i in dept_infos if i["Unique Code"] not in doc_set]
-
     if len(new_infos) != len(set(i["Unique Code"] for i in new_infos)):
         # removing duplicate infos, happens rarely.
         unique_infos, duplicate_codes, seen = [], [], set()
